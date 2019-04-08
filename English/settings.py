@@ -48,12 +48,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'English.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':'127.0.0.1',      #主机端口、用户密码、数据库
+        'PORT':3306,
+        'USER':'root',
+        'PASSWORD':'root',
+        'NAME': 'English',
+
     }
 }
+# }
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
