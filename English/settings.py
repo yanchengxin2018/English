@@ -1,8 +1,7 @@
-import os
-
+import os,sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = '4pip1q&^cek!pk326^@8j(iz-iqz$!1*qc5-1ax!qd8%rq=z$6'
 
 DEBUG = True
@@ -16,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -33,7 +33,8 @@ ROOT_URLCONF = 'English.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -48,11 +49,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'English.wsgi.application'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -64,8 +60,6 @@ DATABASES = {
 
     }
 }
-# }
-
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -94,8 +88,6 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
-
 
 
 
