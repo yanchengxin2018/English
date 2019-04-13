@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'app_user',
     'app_exception',
     'app_tools',
+    'app_databases',
 ]
 
 MIDDLEWARE = [
