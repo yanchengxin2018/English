@@ -1,7 +1,13 @@
 import os,sys
 
+from English.restframework_settings import REST_FRAMEWORK,JWT_AUTH
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+
+AUTH_USER_MODEL = 'app_user.UserModel'
+
 SECRET_KEY = '4pip1q&^cek!pk326^@8j(iz-iqz$!1*qc5-1ax!qd8%rq=z$6'
 
 DEBUG = True
@@ -16,6 +22,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'app_user',
+    'app_exception',
+    'app_tools',
 ]
 
 MIDDLEWARE = [
