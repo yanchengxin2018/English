@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'app_exception',
     'app_tools',
     'app_databases',
+    'app_main',
 ]
 
 MIDDLEWARE = [
@@ -95,7 +96,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+# USE_TZ = True
+USE_TZ = False
 
 STATIC_URL = '/static/'
 
