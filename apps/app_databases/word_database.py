@@ -20,7 +20,8 @@ class StrengthenMemoryModel(models.Model):
     previous_memory_time=models.DateTimeField(help_text='上次记忆时间')
     next_memory_time=models.DateTimeField(help_text='下次记忆时间')
     memory_power=models.IntegerField(default=1,help_text='记忆力持久度')
-
+    class Meta:
+        verbose_name_plural='记忆加强数据库'
 
 #用户记忆记录
 class EnglishWordRecordModel(models.Model):
@@ -34,6 +35,8 @@ class EnglishWordRecordModel(models.Model):
     def __str__(self):
         return '{}|{}'.format(self.created_at,self.english_obj)
 
+    class Meta:
+        verbose_name_plural='记忆记录数据库'
 
 
 

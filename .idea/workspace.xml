@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/app_tools/app_tools_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/English/level_setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/English/restframework_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/restframework_setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/English/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_databases/word_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_databases/word_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/app_main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/app_main/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/app_main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_tools/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_files/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_files/plan.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,102 +29,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_main/app_main_urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#1662#3934#0" />
-              </folding>
+            <state relative-caret-position="192">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
+        <entry file="file://$PROJECT_DIR$/English/level_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="192">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_main/serializers.py">
+        <entry file="file://$PROJECT_DIR$/other_files/记忆强度升降机变化规则表.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/English/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="96">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#216#918#0" />
-                <element signature="e#736#751#0" />
-                <element signature="e#777#918#0" />
-                <element signature="e#821#917#0" />
-                <element signature="e#1006#1717#0" />
-                <element signature="e#1524#1539#0" />
-                <element signature="e#1565#1717#0" />
-                <element signature="e#1614#1716#0" />
-                <element signature="e#1797#2060#0" />
-                <element signature="e#1897#1914#0" />
-                <element signature="e#1940#2060#0" />
-                <element signature="e#1981#2059#0" />
-                <element signature="e#2142#2290#0" />
-                <element signature="e#2162#2290#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_tools/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
-                <element signature="e#349#1733#0" />
-                <element signature="e#1794#1895#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_tools/app_tools_serializer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_databases/word_database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,24 +106,27 @@
         <option value="$PROJECT_DIR$/apps/app_tools/app_tools_urls.py" />
         <option value="$PROJECT_DIR$/apps/app_main.py" />
         <option value="$PROJECT_DIR$/English/urls.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/admin.py" />
-        <option value="$PROJECT_DIR$/apps/app_databases/word_database.py" />
-        <option value="$PROJECT_DIR$/English/settings.py" />
-        <option value="$PROJECT_DIR$/other_files/plan.txt" />
         <option value="$PROJECT_DIR$/apps/app_tools/views.py" />
         <option value="$PROJECT_DIR$/apps/app_main/app_main_urls.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/app_tools_serializer.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
+        <option value="$PROJECT_DIR$/apps/app_user/admin.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/tests.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/admin.py" />
+        <option value="$PROJECT_DIR$/apps/app_databases/word_database.py" />
         <option value="$PROJECT_DIR$/apps/app_main/serializers.py" />
         <option value="$PROJECT_DIR$/apps/app_main/views.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
+        <option value="$PROJECT_DIR$/other_files/plan.txt" />
+        <option value="$PROJECT_DIR$/English/settings.py" />
+        <option value="$PROJECT_DIR$/English/level_setting.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="255" />
-    <option name="y" value="196" />
-    <option name="width" value="1531" />
-    <option name="height" value="607" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1843" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -210,8 +149,7 @@
             <path>
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="app_main" type="462c0819:PsiDirectoryNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
@@ -226,7 +164,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../历史项目/english" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../walionline" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -291,18 +229,17 @@
       <workItem from="1554953453175" duration="4006000" />
       <workItem from="1554980753014" duration="5874000" />
       <workItem from="1555111182709" duration="2469000" />
-      <workItem from="1555148974896" duration="32838000" />
+      <workItem from="1555148974896" duration="47431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51306000" />
+    <option name="totallyTimeSpent" value="65899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26260388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26260388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,7 +252,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35675675" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.08972973" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -400,20 +337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/English/restframework_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_user/app_user_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -526,26 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../virtualenvs/English/lib/python3.6/site-packages/rest_framework/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -564,13 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="179" column="44" lean-forward="true" selection-start-line="179" selection-start-column="44" selection-end-line="179" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -603,55 +499,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_user/app_user_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_user/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_databases/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_databases/word_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#152#449#0" />
+            <element signature="e#401#449#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_main/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="-456">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#216#918#0" />
-            <element signature="e#736#751#0" />
-            <element signature="e#777#918#0" />
-            <element signature="e#821#917#0" />
-            <element signature="e#1006#1717#0" />
-            <element signature="e#1524#1539#0" />
-            <element signature="e#1565#1717#0" />
-            <element signature="e#1614#1716#0" />
-            <element signature="e#1797#2060#0" />
-            <element signature="e#1897#1914#0" />
-            <element signature="e#1940#2060#0" />
-            <element signature="e#1981#2059#0" />
-            <element signature="e#2142#2290#0" />
-            <element signature="e#2162#2290#0" />
+            <element signature="e#2110#2188#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="796">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#1662#3934#0" />
+            <element signature="e#611#744#0" />
+            <element signature="e#819#1590#0" />
+            <element signature="e#1770#2069#0" />
+            <element signature="e#2120#2316#0" />
+            <element signature="e#2354#2631#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="504">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/English/restframework_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/English/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_files/记忆强度升降机变化规则表.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/English/level_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>

@@ -14,10 +14,10 @@ def get_english_word(user_obj):
     #排除了那些需要在未来复习的所有单词
     strengthens_obj =StrengthenMemoryModel.objects.filter(~Q(english_obj__in=englishs_exact_obj))
     #从加强表查询数据  条件：当前用户/最迟时间小于当前
-    strengthens_obj = strengthens_obj.filter(user_obj=user_obj,previous_memory_time__lt=now_time)
+    strengthens_obj = strengthens_obj.filter(user_obj=user_obj,next_memory_time__lt=now_time)
     if strengthens_obj:
         #下次记忆时间位于最早的时间线
-        strengthen_obj = strengthens_obj.order_by('previous_memory_time').first()
+        strengthen_obj = strengthens_obj.order_by('next_memory_time').first()
         # 把记忆加强表的记录处理成数据
         serializer_obj = StrengthenCardSerializer(strengthen_obj)
         return serializer_obj.data
@@ -30,9 +30,9 @@ def get_english_word(user_obj):
     # 排除了那些需要在未来复习的所有单词
     records_obj =EnglishWordRecordModel.objects.filter(~Q(english_obj__in=englishs_exact_obj))
     # 从记录表查询数据  条件：当前用户/最迟时间小于当前
-    records_obj = records_obj.filter(user_obj=user_obj,previous_memory_time__lt=now_time)
+    records_obj = records_obj.filter(user_obj=user_obj,next_memory_time__lt=now_time)
     if records_obj:
-        record_obj = records_obj.order_by('previous_memory_time').first()
+        record_obj = records_obj.order_by('next_memory_time').first()
         # 把历史记忆表的记录处理成数据
         serializer_obj = EnglishWordRecordCardSerialzer(record_obj)
         return serializer_obj.data

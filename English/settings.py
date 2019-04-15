@@ -1,6 +1,8 @@
 import os,sys
 
-from English.restframework_settings import REST_FRAMEWORK,JWT_AUTH
+from English.restframework_setting import REST_FRAMEWORK,JWT_AUTH
+from English.level_setting import *
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -88,9 +90,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -100,6 +104,8 @@ USE_L10N = True
 USE_TZ = False
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR,'static'),
+)
 
 

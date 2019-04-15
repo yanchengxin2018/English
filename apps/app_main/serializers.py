@@ -1,12 +1,11 @@
 from rest_framework import serializers
 from app_databases.models import StrengthenMemoryModel,EnglishWordRecordModel,EnglishWordModel
-from app_exception import custom_exceptions
 import datetime
 
 
 from app_tools.app_tools_serializer import get_view_from_serializer
 
-#从记忆加强数据库得到单词
+# 从记忆加强数据库得到单词
 class StrengthenCardSerializer(serializers.ModelSerializer):
 
     card_type = serializers.SerializerMethodField()
@@ -28,20 +27,14 @@ class StrengthenCardSerializer(serializers.ModelSerializer):
                 'card_type','previous_memory_time',)
 
 
-#从记忆历史数据库得到单词
+# 从记忆历史数据库得到单词
 class EnglishWordRecordCardSerialzer(serializers.ModelSerializer):
-    card_type = serializers.SerializerMethodField()
     index = serializers.CharField(source='english_obj.index')
     english = serializers.CharField(source='english_obj.english')
     chinese = serializers.CharField(source='english_obj.chinese')
     pronunciation = serializers.CharField(source='english_obj.pronunciation')
-    previous_memory_time = serializers.SerializerMethodField()
-
-    def get_card_type(self, strengthen_obj):
-        return 'record'
-
-    def get_previous_memory_time(self, strengthen_obj):
-        return '上次记忆时间'
+    previous_memory_time = serializers.DateTimeField(format='%Y年%m月%d日%H点%M分%S秒')
+    card_type = serializers.CharField(default='record',read_only=True)
 
     class Meta:
         model = EnglishWordRecordModel
@@ -49,7 +42,7 @@ class EnglishWordRecordCardSerialzer(serializers.ModelSerializer):
                   'card_type', 'previous_memory_time',)
 
 
-#从全部单词数据库得到单词
+# 从全部单词数据库得到单词
 class EnglishWordSerializer(serializers.ModelSerializer):
 
     card_type=serializers.SerializerMethodField()
@@ -58,12 +51,12 @@ class EnglishWordSerializer(serializers.ModelSerializer):
         return 'new_card'
 
     class Meta:
-        model=EnglishWordModel
+        model = EnglishWordModel
         fields = ('index', 'english', 'chinese', 'pronunciation',
                   'card_type',)
 
 
-#新建一条记忆记录
+# 新建一条记忆记录
 class EnglishWordRecordSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -71,7 +64,7 @@ class EnglishWordRecordSerializer(serializers.ModelSerializer):
         fields=('user_obj','english_obj','previous_memory_time','next_memory_time','memory_power',)
 
 
-#EnglishWordRecordViewSet视图post字段序列化器
+# EnglishWordRecordViewSet视图post字段序列化器
 class EnglishWordRecordViewSetSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -79,14 +72,14 @@ class EnglishWordRecordViewSetSerializer(serializers.ModelSerializer):
         fields=('index',)
 
 
-#TestCardCommitViewSet视图post字段序列化器
+# TestCardCommitViewSet视图post字段序列化器
 class TestCardCommitViewSetSerializer(serializers.Serializer):
     index=serializers.CharField()
     word_input=serializers.CharField()
     card_type=serializers.CharField()
 
 
-#信息卡
+# 信息卡
 class InfoCardSerializer(serializers.ModelSerializer):
     # 记忆类型  正确标记  输入  正确单词  xxx秒后再试  音标  汉语 记忆持久力变化
     card_type=serializers.SerializerMethodField()

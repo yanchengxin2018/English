@@ -40,6 +40,7 @@ class MemoryCardCommitViewSet(G,M.CreateModelMixin):
 
 #通过测试卡提交并获得数据
 class TestCardCommitViewSet(G,M.CreateModelMixin):
+
     serializer_class = TestCardCommitViewSetSerializer
 
     def create(self, request, *args, **kwargs):
@@ -85,8 +86,9 @@ class TestCardCommitViewSet(G,M.CreateModelMixin):
 
         user_obj=self.request.user
         english_obj=self.word_obj
-        previous_memory_time=datetime.datetime.now()
-        next_memory_time=previous_memory_time+datetime.timedelta(seconds=memory_power)
+        now_time=datetime.datetime.now()
+        previous_memory_time=now_time
+        next_memory_time=now_time+datetime.timedelta(seconds=memory_power)
         data={'user_obj':user_obj,'english_obj':english_obj,'previous_memory_time':previous_memory_time,
               'next_memory_time':next_memory_time,'memory_power':memory_power}
         log_obj=log_model.objects.create(**data)
@@ -95,7 +97,7 @@ class TestCardCommitViewSet(G,M.CreateModelMixin):
         return serializer_obj.data
 
 
-
+# a 最新一次更新小于当前时间线
 
 
 
