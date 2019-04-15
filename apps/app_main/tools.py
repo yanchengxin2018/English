@@ -8,12 +8,12 @@ from app_main.serializers import StrengthenCardSerializer,EnglishWordRecordCardS
 def get_english_word(user_obj):
     now_time = datetime.datetime.now()
     # 从记忆加强数据库得到单词
-    #下次记忆时间大于当前时间的单词记录
-    englishs_exact_obj=EnglishWordModel.objects.filter(strengthenmemorymodel__previous_memory_time__gt=now_time).distinct()
-    #排除了那些下次记忆时间大于当前时间的所有单词
+    # 找出来需要在未来复习而不是现在的那部分单词
+    englishs_exact_obj=EnglishWordModel.objects.filter(
+        strengthenmemorymodel__next_memory_time__gt=now_time).distinct()
+    #排除了那些需要在未来复习的所有单词
     strengthens_obj =StrengthenMemoryModel.objects.filter(~Q(english_obj__in=englishs_exact_obj))
     #从加强表查询数据  条件：当前用户/最迟时间小于当前
-
     strengthens_obj = strengthens_obj.filter(user_obj=user_obj,previous_memory_time__lt=now_time)
     if strengthens_obj:
         #下次记忆时间位于最早的时间线
@@ -24,7 +24,10 @@ def get_english_word(user_obj):
 
 
     # 从记忆历史数据库得到单词
-    #排除了那些下次记忆时间大于当前时间的所有单词
+    # 找出来需要在未来复习而不是现在的那部分单词
+    englishs_exact_obj = EnglishWordModel.objects.filter(
+        englishwordrecordmodel__next_memory_time__gt=now_time).distinct()
+    # 排除了那些需要在未来复习的所有单词
     records_obj =EnglishWordRecordModel.objects.filter(~Q(english_obj__in=englishs_exact_obj))
     # 从记录表查询数据  条件：当前用户/最迟时间小于当前
     records_obj = records_obj.filter(user_obj=user_obj,previous_memory_time__lt=now_time)
