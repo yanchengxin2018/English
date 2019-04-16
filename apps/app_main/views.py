@@ -1,105 +1,119 @@
 import datetime
-from rest_framework.viewsets import GenericViewSet as G
-from rest_framework import mixins as M
+from rest_framework.viewsets import GenericViewSet
+from rest_framework import mixins
 from rest_framework.response import Response
-from app_main.tools import get_english_word
-from app_main.serializers import EnglishWordRecordSerializer,EnglishWordRecordViewSetSerializer
-from app_databases.models import EnglishWordModel
+from app_main.serializers import MemoryCardCommitSerializer
 from app_exception import custom_exceptions
-from app_databases.models import StrengthenMemoryModel,EnglishWordRecordModel
-from app_main.serializers import InfoCardSerializer,TestCardCommitViewSetSerializer
+from app_databases.models import StrengthenMemoryModel, EnglishWordRecordModel
+from app_main.serializers import StrengthenCardCommitSerializer, UpdateCardCommitSerializer
+from app_main.tools import log_update, get_card
+from app_main.tools import is_exist_log, get_word_obj, log_lowwer
+from app_main.tools import is_spell_right, get_next_memory_time, get_level_alter
+from django.conf import settings
 
 
-#无参数提交并获得数据
-class StartViewSet(G,M.ListModelMixin):
+# 得到一张卡片
+class CardViewSet(GenericViewSet, mixins.ListModelMixin):
 
     def list(self, request, *args, **kwargs):
-        english_data = get_english_word(request.user)
-        return Response(english_data)
+        card = get_card(request.user)
+        if not card:
+            raise custom_exceptions.Status_404('当前时间没有产生新的卡片')
+        return Response(card)
 
 
-#通过记忆卡片提交并获得数据
-class MemoryCardCommitViewSet(G,M.CreateModelMixin):
-    serializer_class = EnglishWordRecordViewSetSerializer
+# 记忆卡片提交
+class MemoryCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
+    serializer_class = MemoryCardCommitSerializer
 
-    #返回记忆卡或者测试卡
+    # 返回记忆卡或者测试卡
     def create(self, request, *args, **kwargs):
-        user_obj=request.user
-        english_obj=request.data.get('index',None)
-        previous_memory_time=datetime.datetime.now()
-        next_memory_time=previous_memory_time+datetime.timedelta(seconds=5)
-        memory_power=5
-        data={'user_obj':user_obj.id,'english_obj':english_obj,'previous_memory_time':previous_memory_time,
-         'next_memory_time':next_memory_time,'memory_power':memory_power}
-        serializer_obj=EnglishWordRecordSerializer(data=data)
-        serializer_obj.is_valid(raise_exception=True)
-        serializer_obj.save()
-        english_data = get_english_word(request.user)
-        return Response(english_data)
+        word_index = self.request.data.get('word_index', None)
+        word_obj = get_word_obj(word_index)
+        user_obj = self.request.user
+        self.record_update(word_obj)
+        card = get_card(user_obj)
+        return Response(card)
+
+    def record_update(self, word_obj):
+        user_obj = self.request.user
+        record_obj = EnglishWordRecordModel.objects.filter(english_obj=word_obj).first()
+        if record_obj:
+            raise custom_exceptions.Status_403('单词已经存在于记录库,请通过record类型的卡片提交')
+        log_update('update_card', user_obj, word_obj)
 
 
-#通过测试卡提交并获得数据
-class TestCardCommitViewSet(G,M.CreateModelMixin):
-
-    serializer_class = TestCardCommitViewSetSerializer
+# 加强卡片提交
+class StrengthenCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
+    serializer_class = StrengthenCardCommitSerializer
 
     def create(self, request, *args, **kwargs):
-        self.word_obj=self.get_word_obj()
-        self.card_type=request.data.get('card_type',None)
-        if not self.card_type:raise custom_exceptions.Status_400('card_type是必须的')
-        self.is_ok=True if self.input_is_ok() else False
-        data = self.word_level_alter()
+        user_obj = request.user
+        card_type = 'strengthen_card'
+        word_index = request.data.get('word_index', None)
+        if not is_exist_log(user_obj=user_obj, card_type=card_type, word_index=word_index):
+            raise custom_exceptions.Status_404('没有在加强库发现当前用户此单词的记录')
+        data = self.strengthen_update()
         return Response(data)
 
-    #判断输入是否正确
-    def input_is_ok(self):
-        word_obj=self.word_obj
-        self.word_input=self.request.data.get('word_input',None)
-        if word_obj.english!=self.word_input:
-            return False
+    def strengthen_update(self):
+        card_type = 'strengthen_card'
+        spell = self.request.data.get('spell', None)
+        word_index = self.request.data.get('word_index', None)
+        user_obj = self.request.user
+        is_right = is_spell_right(spell, word_index)
+        word_obj = get_word_obj(word_index)
+        if is_right:
+            user_word_strengthen_obj = StrengthenMemoryModel.objects.filter(
+                english_obj__pk=word_index, user_obj=user_obj)
+            strengthen_last_obj = user_word_strengthen_obj.order_by('created_at').last()
+
+            highest_level = settings.STRENGTHEN_HIGHEST
+            if strengthen_last_obj.level >= highest_level:
+                user_word_strengthen_obj.delete()
+                next_memory_time = '已结束记忆加强'
+            else:
+                log_update(card_type, user_obj, word_obj)
+                next_memory_time = get_next_memory_time(card_type, user_obj, word_obj)
         else:
-            return True
+            log_lowwer(card_type, user_obj, word_obj)
+            next_memory_time = get_next_memory_time(card_type, user_obj, word_obj)
+        level_alter = get_level_alter(card_type, user_obj, word_obj)
+        data = {'card_type': 'info_card', 'word_index': word_index, 'spell': spell, 'is_right': is_right,
+                'next_memory_time': next_memory_time, 'level_alter': level_alter}
+        return data
 
-    def get_word_obj(self):
-        index = self.request.data.get('index', None)
-        if not index:raise custom_exceptions.Status_400('index参数是必须的')
-        word_obj=EnglishWordModel.objects.filter(pk=index).first()
-        if not word_obj:raise custom_exceptions.Status_404('没有找到这个资源')
-        return word_obj
 
-    #单词级别变化
-    def word_level_alter(self):
-        # card_type  'strengthen'   'record'
-        if self.card_type=='strengthen':
-            log_model=StrengthenMemoryModel
-        elif self.card_type=='record':
-            log_model=EnglishWordRecordModel
+# 升级卡片提交
+class UpdateCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
+    serializer_class = UpdateCardCommitSerializer
+
+    def create(self, request, *args, **kwargs):
+        user_obj = request.user
+        card_type = 'update_card'
+        word_index = request.data.get('word_index', None)
+        if not is_exist_log(user_obj=user_obj, card_type=card_type, word_index=word_index):
+            raise custom_exceptions.Status_404('没有在记录库发现当前用户此单词的记录')
+        data = self.update_update()
+        return Response(data)
+
+    # 升级记录库
+    def update_update(self):
+        card_type = 'update_card'
+        spell = self.request.data.get('spell', None)
+        word_index = self.request.data.get('word_index', None)
+        user_obj = self.request.user
+        is_right = is_spell_right(spell, word_index)
+        word_obj = get_word_obj(word_index)
+        if is_right:
+            log_update(card_type, user_obj, word_obj)
+            next_memory_time = get_next_memory_time(card_type, user_obj, word_obj)
         else:
-            raise custom_exceptions.Status_400("'card_type' only use 'strengthen' or 'record' !")
-        log_obj=log_model.objects.filter(english_obj=self.word_obj).order_by('-created_at').first()
-        if not log_obj:raise custom_exceptions.Status_404('{}卡片库没有发现这个单词'.format(self.card_type))
-
-        if self.is_ok:
-            memory_power=(log_obj.memory_power*5) if log_obj.memory_power else 5
-        else:
-            memory_power = int(log_obj.memory_power / 5)
-
-        user_obj=self.request.user
-        english_obj=self.word_obj
-        now_time=datetime.datetime.now()
-        previous_memory_time=now_time
-        next_memory_time=now_time+datetime.timedelta(seconds=memory_power)
-        data={'user_obj':user_obj,'english_obj':english_obj,'previous_memory_time':previous_memory_time,
-              'next_memory_time':next_memory_time,'memory_power':memory_power}
-        log_obj=log_model.objects.create(**data)
-        context=self.get_serializer_context()
-        serializer_obj=InfoCardSerializer(log_obj,context=context)
-        return serializer_obj.data
-
-
-# a 最新一次更新小于当前时间线
-
-
-
-
-
+            log_lowwer(card_type, user_obj, word_obj)
+            next_memory_time = get_next_memory_time(card_type, user_obj, word_obj)
+        level_alter = get_level_alter(card_type, user_obj, word_obj)
+        data = {'card_type': 'info_card', 'word_index': word_index, 'spell': spell, 'is_right': is_right,
+                'next_memory_time': next_memory_time, 'level_alter': level_alter}
+        if next_memory_time - datetime.datetime.now() > datetime.timedelta(days=30):
+            log_update('strengthen_card', user_obj, word_obj)
+        return data

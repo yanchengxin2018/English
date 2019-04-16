@@ -1,13 +1,15 @@
+from django.conf import settings
 from rest_framework.viewsets import GenericViewSet as G,ModelViewSet
 from rest_framework import mixins as M
 from rest_framework.response import Response
-from app_tools.serializers import MakeEnglishWordSerializer,EnglishWordSerializer
-from app_databases.models import EnglishWordModel
+from app_tools.serializers import MakeEnglishWordSerializer,EnglishWordSerializer,LevelSerializer
+from app_databases.models import EnglishWordModel,LevelModel
+from app_tools.permissions import IsManagerPermission
 
 
-#制作数据库
+#制作单词数据库
 class MakeEnglishWordViewSet(G,M.ListModelMixin):
-
+    permission_classes = (IsManagerPermission,)
     def list(self, request, *args, **kwargs):
         with open('apps/app_tools/english_word.txt','r') as f:
             lines=f.readlines()
@@ -56,6 +58,28 @@ class EnglishWordViewSet(G,M.ListModelMixin):
     serializer_class = EnglishWordSerializer
 
 
+#初始化记忆强度等级信息
+class MakeLevelViewSet(G,M.ListModelMixin,M.CreateModelMixin):
+    queryset = LevelModel.objects.all().order_by('level')
+    serializer_class = LevelSerializer
+
+    def create(self, request, *args, **kwargs):
+        LevelModel.objects.all().delete()
+        for level in range(15):
+            LEVEL='LEVEL_{}'.format(level)
+            time_long=getattr(settings,LEVEL)
+            cycle=self.get_cycle(level)
+            LevelModel.objects.create(level=level,time_long=time_long,cycle=cycle)
+        return Response('初始化完毕')
+
+    #获得周期字段
+    def get_cycle(self,level):
+        if level<=4:
+            return 'd'
+        elif (level<=9) and (level>4):
+            return 'z'
+        else:
+            return 'c'
 
 
 

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="" />
+    <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/app_databases/tool_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/app_tools/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/English/level_setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/level_setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_databases/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_databases/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_databases/word_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_databases/word_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_tools/app_tools_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/app_tools_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_tools/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_tools/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other_files/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_files/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/1.png" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +29,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1368">
+              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/app_main/app_main_urls.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <folding>
+                <element signature="e#1773#3604#0" />
+                <element signature="e#1880#2230#0" />
+                <element signature="e#2273#3604#0" />
+                <element signature="e#2586#3176#0" />
+                <element signature="e#2935#3013#0" />
+                <element signature="e#3048#3176#0" />
+                <element signature="e#3203#3327#0" />
+                <element signature="e#3412#3584#0" />
+                <element signature="e#3692#5196#0" />
+                <element signature="e#3795#4137#0" />
+                <element signature="e#4188#5196#0" />
+                <element signature="e#4497#4621#0" />
+                <element signature="e#4648#4772#0" />
+                <element signature="e#4857#5029#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#1#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/app_main/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/app_databases/word_database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -60,26 +146,29 @@
         <option value="$PROJECT_DIR$/apps/app_tools/app_tools_auth.py" />
         <option value="$PROJECT_DIR$/apps/app_user/views.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/models.py" />
-        <option value="$PROJECT_DIR$/apps/app_databases/models.py" />
-        <option value="$PROJECT_DIR$/apps/app_tools/serializers.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/english_word.txt" />
         <option value="$PROJECT_DIR$/other_files/readme.txt" />
-        <option value="$PROJECT_DIR$/apps/app_tools/app_tools_urls.py" />
         <option value="$PROJECT_DIR$/apps/app_main.py" />
         <option value="$PROJECT_DIR$/English/urls.py" />
-        <option value="$PROJECT_DIR$/apps/app_tools/views.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/app_main_urls.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/app_tools_serializer.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
         <option value="$PROJECT_DIR$/apps/app_user/admin.py" />
         <option value="$PROJECT_DIR$/apps/app_main/tests.py" />
         <option value="$PROJECT_DIR$/apps/app_main/admin.py" />
-        <option value="$PROJECT_DIR$/apps/app_databases/word_database.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/serializers.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/views.py" />
-        <option value="$PROJECT_DIR$/other_files/plan.txt" />
-        <option value="$PROJECT_DIR$/English/level_setting.py" />
         <option value="$PROJECT_DIR$/English/settings.py" />
+        <option value="$PROJECT_DIR$/apps/app_tools/permissions.py" />
+        <option value="$PROJECT_DIR$/apps/app_databases/models.py" />
+        <option value="$PROJECT_DIR$/apps/app_tools/app_tools_urls.py" />
+        <option value="$PROJECT_DIR$/apps/app_tools/serializers.py" />
+        <option value="$PROJECT_DIR$/apps/app_tools/views.py" />
+        <option value="$PROJECT_DIR$/apps/app_databases/tool_database.py" />
+        <option value="$PROJECT_DIR$/apps/app_tools/app_tools_view.py" />
+        <option value="$PROJECT_DIR$/English/level_setting.py" />
+        <option value="$PROJECT_DIR$/other_files/plan.txt" />
+        <option value="$PROJECT_DIR$/apps/app_main/serializers.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/app_main_urls.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/views.py" />
+        <option value="$PROJECT_DIR$/apps/app_databases/word_database.py" />
+        <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
       </list>
     </option>
   </component>
@@ -94,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,22 +198,24 @@
             <path>
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
-              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="app_main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
-              <item name="other_files" type="462c0819:PsiDirectoryNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../walionline" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CRM_survey" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -190,17 +280,18 @@
       <workItem from="1554953453175" duration="4006000" />
       <workItem from="1554980753014" duration="5874000" />
       <workItem from="1555111182709" duration="2469000" />
-      <workItem from="1555148974896" duration="47747000" />
+      <workItem from="1555148974896" duration="59367000" />
+      <workItem from="1555388791285" duration="14920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66215000" />
+    <option name="totallyTimeSpent" value="92755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26260388" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26592797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -213,9 +304,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29405406" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.499723" visible="true" weight="0.42918918" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.500277" side_tool="true" weight="0.29405406" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -247,33 +338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_exception/custom_exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#419#714#0" />
-            <element signature="e#577#714#0" />
-            <element signature="e#750#1021#0" />
-            <element signature="e#920#1021#0" />
-            <element signature="e#1057#1289#0" />
-            <element signature="e#1188#1289#0" />
-            <element signature="e#1325#1553#0" />
-            <element signature="e#1452#1553#0" />
-            <element signature="e#1589#1828#0" />
-            <element signature="e#1727#1828#0" />
-            <element signature="e#1864#2093#0" />
-            <element signature="e#1992#2093#0" />
-            <element signature="e#2129#2374#0" />
-            <element signature="e#2273#2374#0" />
-            <element signature="e#2410#2649#0" />
-            <element signature="e#2548#2649#0" />
-            <element signature="e#2685#2885#0" />
-            <element signature="e#2816#2885#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -349,16 +413,6 @@
     <entry file="file://$PROJECT_DIR$/apps/app_tools/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_tools/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/other_files/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -373,26 +427,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_tools/app_tools_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_databases/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main.py" />
     <entry file="file://$PROJECT_DIR$/apps/app_main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -431,32 +466,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/app_main_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_tools/app_tools_serializer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_tools/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-            <element signature="e#349#1733#0" />
-            <element signature="e#1794#1895#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -483,58 +496,12 @@
     <entry file="file://$PROJECT_DIR$/apps/app_main/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_databases/word_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#152#449#0" />
-            <element signature="e#401#449#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#2110#2188#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_main/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#611#744#0" />
-            <element signature="e#819#1590#0" />
-            <element signature="e#1770#2069#0" />
-            <element signature="e#2120#2316#0" />
-            <element signature="e#2354#2631#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -546,19 +513,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/level_setting.py">
+    <entry file="file://$PROJECT_DIR$/apps/app_tools/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="72">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/other_files/记忆强度升降机变化规则表.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/English/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2664">
+        <state relative-caret-position="863">
           <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -566,10 +530,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_databases/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_files/记忆强度升降机变化规则表.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_tools/app_tools_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_tools/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#167#731#0" />
+            <element signature="e#187#276#0" />
+            <element signature="e#324#731#0" />
+            <element signature="e#474#667#0" />
+            <element signature="e#804#921#0" />
+            <element signature="e#824#921#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_databases/tool_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_tools/app_tools_view.py" />
+    <entry file="file://$PROJECT_DIR$/apps/app_tools/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#464#1896#0" />
+            <element signature="e#562#1063#0" />
+            <element signature="e#704#1033#0" />
+            <element signature="e#1107#1492#0" />
+            <element signature="e#1537#1641#0" />
+            <element signature="e#1686#1756#0" />
+            <element signature="e#1813#1896#0" />
+            <element signature="e#1957#2058#0" />
+            <element signature="e#2141#2788#0" />
+            <element signature="e#2291#2601#0" />
+            <element signature="e#2369#2568#0" />
+            <element signature="e#2654#2788#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_exception/custom_exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-768">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/English/level_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/app_main_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#1773#3604#0" />
+            <element signature="e#1880#2230#0" />
+            <element signature="e#2273#3604#0" />
+            <element signature="e#2586#3176#0" />
+            <element signature="e#2935#3013#0" />
+            <element signature="e#3048#3176#0" />
+            <element signature="e#3203#3327#0" />
+            <element signature="e#3412#3584#0" />
+            <element signature="e#3692#5196#0" />
+            <element signature="e#3795#4137#0" />
+            <element signature="e#4188#5196#0" />
+            <element signature="e#4497#4621#0" />
+            <element signature="e#4648#4772#0" />
+            <element signature="e#4857#5029#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_databases/word_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#1#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

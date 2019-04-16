@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from app_databases.models import EnglishWordModel
+from app_databases.models import EnglishWordModel,LevelModel
 
 
 #制作单词数据库
@@ -28,9 +28,17 @@ class EnglishWordSerializer(serializers.ModelSerializer):
 
 
 
-
-
-
+#记忆强度等级初始化
+class LevelSerializer(serializers.ModelSerializer):
+    choices=(
+        (1,'开始初始化'),
+        (2,'开始更新'),
+    )
+    order=serializers.ChoiceField(choices=choices,write_only=True)
+    class Meta:
+        model=LevelModel
+        fields=('level','time_long','cycle','order',)
+        read_only_fields=('level','time_long','cycle',)
 
 
 
