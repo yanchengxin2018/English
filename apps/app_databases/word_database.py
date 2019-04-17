@@ -12,7 +12,7 @@ class EnglishWordModel(models.Model):
     pronunciation = models.CharField(max_length=100, help_text='音标')
 
     def __str__(self):
-        return '{}|{}'.format(self.english, self.chinese)
+        return '{}|{}[{}]'.format(self.english, self.chinese, self.id)
 
 
 # 记忆加强表
@@ -43,6 +43,7 @@ class EnglishWordRecordModel(models.Model):
     class Meta:
         verbose_name_plural = '记忆记录数据库'
 
+
 '''
 
 有一个数据表XxxModel,有下面3个字段
@@ -53,10 +54,3 @@ class EnglishWordRecordModel(models.Model):
 3.取集合中next_time最小(早)的
 
 '''
-
-
-
-
-
-
-

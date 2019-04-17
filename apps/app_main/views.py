@@ -1,19 +1,21 @@
 import datetime
-from rest_framework.viewsets import GenericViewSet
+from django.conf import settings
 from rest_framework import mixins
+from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
-from app_main.serializers import MemoryCardCommitSerializer
 from app_exception import custom_exceptions
 from app_databases.models import StrengthenMemoryModel, EnglishWordRecordModel
+from app_main.serializers import MemoryCardCommitSerializer
 from app_main.serializers import StrengthenCardCommitSerializer, UpdateCardCommitSerializer
 from app_main.tools import log_update, get_card
 from app_main.tools import is_exist_log, get_word_obj, log_lowwer
 from app_main.tools import is_spell_right, get_next_memory_time, get_level_alter
-from django.conf import settings
+from app_main.permissions import IsAuthPermission
 
 
 # 得到一张卡片
 class CardViewSet(GenericViewSet, mixins.ListModelMixin):
+    permission_classes = (IsAuthPermission,)
 
     def list(self, request, *args, **kwargs):
         card = get_card(request.user)
@@ -25,6 +27,7 @@ class CardViewSet(GenericViewSet, mixins.ListModelMixin):
 # 记忆卡片提交
 class MemoryCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
     serializer_class = MemoryCardCommitSerializer
+    permission_classes = (IsAuthPermission,)
 
     # 返回记忆卡或者测试卡
     def create(self, request, *args, **kwargs):
@@ -46,13 +49,14 @@ class MemoryCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
 # 加强卡片提交
 class StrengthenCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
     serializer_class = StrengthenCardCommitSerializer
+    permission_classes = (IsAuthPermission,)
 
     def create(self, request, *args, **kwargs):
         user_obj = request.user
         card_type = 'strengthen_card'
         word_index = request.data.get('word_index', None)
         if not is_exist_log(user_obj=user_obj, card_type=card_type, word_index=word_index):
-            raise custom_exceptions.Status_404('没有在加强库发现当前用户此单词的记录')
+            raise custom_exceptions.Status_404('没有找到对应的卡片')
         data = self.strengthen_update()
         return Response(data)
 
@@ -87,13 +91,14 @@ class StrengthenCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
 # 升级卡片提交
 class UpdateCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
     serializer_class = UpdateCardCommitSerializer
+    permission_classes = (IsAuthPermission,)
 
     def create(self, request, *args, **kwargs):
         user_obj = request.user
         card_type = 'update_card'
         word_index = request.data.get('word_index', None)
         if not is_exist_log(user_obj=user_obj, card_type=card_type, word_index=word_index):
-            raise custom_exceptions.Status_404('没有在记录库发现当前用户此单词的记录')
+            raise custom_exceptions.Status_404('没有找到对应的卡片')
         data = self.update_update()
         return Response(data)
 

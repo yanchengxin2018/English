@@ -1,4 +1,3 @@
-
 import datetime
 import random
 from django.db.models import Q
@@ -7,6 +6,7 @@ from app_databases.models import StrengthenMemoryModel, EnglishWordRecordModel, 
 from app_main.serializers import StrengthenCardSerializer, EnglishWordSerializer
 from app_main.serializers import UpdateCardSerializer
 from app_exception import custom_exceptions
+from django.db.models import Max
 
 
 # 得到一张单词卡(加强卡/升级卡/记忆卡)
@@ -24,7 +24,11 @@ def get_card(user_obj):
 
 # 得到一张加强卡
 def get_strengthens_card(user_obj):
-    strengthen_obj = StrengthenMemoryModel.objects.filter(user_obj=user_obj).order_by('created_at').last()
+    group = StrengthenMemoryModel.objects.filter(user_obj=user_obj).values(
+        'english_obj').annotate(created_at=Max('created_at'))
+    created_ats = {data.get('created_at') for data in group}
+    strengthen_obj = StrengthenMemoryModel.objects.filter(
+        created_at__in=created_ats).order_by('next_memory_time').first()
     if not strengthen_obj:
         return None
     now_time = datetime.datetime.now()
@@ -37,17 +41,10 @@ def get_strengthens_card(user_obj):
 
 # 得到一张升级卡
 def get_update_card(user_obj):
-
-
-    from django.db.models import Max
-    a=EnglishWordRecordModel.objects.filter(user_obj=user_obj).values(
-        'english_obj').annotate(bbb=Max('created_at'))
-    print('-->',a)
-    b=a.order_by('next_memory_time')
-    print('--->', b)
-
-
-    record_obj = EnglishWordRecordModel.objects.filter(user_obj=user_obj).order_by('next_memory_time').last()
+    group = EnglishWordRecordModel.objects.filter(user_obj=user_obj).values(
+        'english_obj').annotate(created_at=Max('created_at'))
+    created_ats = {data.get('created_at') for data in group}
+    record_obj = EnglishWordRecordModel.objects.filter(created_at__in=created_ats).order_by('next_memory_time').first()
     if not record_obj:
         return None
     now_time = datetime.datetime.now()
@@ -97,7 +94,7 @@ def log_update(card_type, user_obj, word_obj):
             EnglishWordRecordModel.objects.create(**data)
     elif card_type == 'strengthen_card':
         strengthen_obj = StrengthenMemoryModel.objects.filter(
-            user_obj=user_obj, word_obj=word_obj).order_by('created_at').last()
+            user_obj=user_obj, english_obj=word_obj).order_by('created_at').last()
         if not strengthen_obj:
             seconds = getattr(settings, 'LEVEL_{}'.format(0))
             next_memory_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
@@ -123,7 +120,7 @@ def log_update(card_type, user_obj, word_obj):
 def log_lowwer(card_type, user_obj, word_obj):
     if card_type == 'update_card':
         record_obj = EnglishWordRecordModel.objects.filter(
-            user_obj=user_obj, word_obj=word_obj).order_by('created_at').last()
+            user_obj=user_obj, english_obj=word_obj).order_by('created_at').last()
         if not record_obj:
             seconds = getattr(settings, 'LEVEL_{}'.format(0))
             next_memory_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
@@ -142,7 +139,7 @@ def log_lowwer(card_type, user_obj, word_obj):
             EnglishWordRecordModel.objects.create(**data)
     elif card_type == 'strengthen_card':
         strengthen_obj = StrengthenMemoryModel.objects.filter(
-            user_obj=user_obj, word_obj=word_obj).order_by('created_at').last()
+            user_obj=user_obj, english_obj=word_obj).order_by('created_at').last()
         if not strengthen_obj:
             seconds = getattr(settings, 'LEVEL_{}'.format(0))
             next_memory_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
@@ -174,7 +171,7 @@ def get_next_memory_time(card_type, user_obj, word_obj):
             return next_memory_time
     elif card_type == 'strengthen_card':
         strengthen_obj = StrengthenMemoryModel.objects.filter(
-            user_obj=user_obj, word_obj=word_obj).order_by('created_at').last()
+            user_obj=user_obj, english_obj=word_obj).order_by('created_at').last()
         if not strengthen_obj:
             raise custom_exceptions.Status_503('服务器繁忙,请稍后再试')
         else:
@@ -189,7 +186,7 @@ def get_level_alter(card_type, user_obj, word_obj):
             user_obj=user_obj, english_obj=word_obj).order_by('-created_at')
     elif card_type == 'strengthen_card':
         logs_obj = StrengthenMemoryModel.objects.filter(
-            user_obj=user_obj, word_obj=word_obj).order_by('-created_at')
+            user_obj=user_obj, english_obj=word_obj).order_by('-created_at')
     else:
         raise custom_exceptions.Status_400('card_type不能被理解')
 
@@ -210,13 +207,18 @@ def is_exist_log(user_obj, card_type, word_index):
         raise custom_exceptions.Status_400("期望从index得到一个数字")
 
     if card_type == 'update_card':
-        record_obj = EnglishWordRecordModel.objects.filter(user_obj=user_obj, english_obj__pk=word_index).first()
-        return bool(record_obj)
+        log_obj = EnglishWordRecordModel.objects.filter(
+            user_obj=user_obj, english_obj__pk=word_index).order_by('created_at').last()
     elif card_type == 'strengthen_card':
-        strengthen_obj = StrengthenMemoryModel.objects.filter(user_obj=user_obj, english_obj__pk=word_index).first()
-        return bool(strengthen_obj)
+        log_obj = StrengthenMemoryModel.objects.filter(
+            user_obj=user_obj, english_obj__pk=word_index).order_by('created_at').last()
     else:
         raise custom_exceptions.Status_400("期望从'card_type'返回一个'update_card' 或 'strengthen_card'")
+    if log_obj:
+        now_time = datetime.datetime.now()
+        return log_obj.next_memory_time < now_time
+    else:
+        return False
 
 
 # 拼写是否正确
