@@ -1,0 +1,65 @@
+
+#index {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 725px;
+}
+
+#index_title {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 90%;
+    height: 10%;
+    transform: rotate(-2deg);
+    background-image: url("http://172.16.10.35:8000/static/HTML/index/title.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#index_start {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 40%;
+    height: 10%;
+    transform: rotate(7deg);
+}
+
+#index_census {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 40%;
+    height: 10%;
+    transform: rotate(-14deg);
+}
+
+#index_help {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    width: 40%;
+    height: 10%;
+    transform: rotate(20deg);
+
+}
+
+#index_exit {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 40%;
+    height: 10%;
+    transform: rotate(190deg);
+
+}
+

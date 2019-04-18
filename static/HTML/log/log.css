@@ -1,0 +1,83 @@
+#screen
+{
+        /*border: red solid 1px;*/
+    left: 10%;
+    top: 65%;
+    width: 80%;
+    height: 4%;
+    position: absolute;
+    text-align: center;
+    color: #6fff4b;
+}
+
+
+#log {
+    /*border: red solid 1px;*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+#title {
+    /*border: red solid 1px;*/
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    height: 15%;
+    position: absolute;
+}
+
+#div_username {
+    /*border: red solid 1px;*/
+    left: 10%;
+    top: 35%;
+    width: 80%;
+    height: 8%;
+    position: absolute;
+    font-size: 200%;
+}
+
+#username {
+    border: #131215 solid 1px;
+    left: 29%;
+    top: 2%;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    font-size: 100%;
+}
+
+
+#div_password {
+    /*border: red solid 1px;*/
+    left: 10%;
+    top: 50%;
+    width: 80%;
+    height: 8%;
+    position: absolute;
+    font-size: 200%;
+}
+
+#password {
+    border: #131215 solid 1px;
+    left: 29%;
+    top: 2%;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    font-size: 100%;
+}
+
+#ok {
+    /*border: #ff383f solid 1px;*/
+    left: 40%;
+    top: 80%;
+    width: 30%;
+    height: 6%;
+    position: absolute;
+    font-size: 250%;
+}
+

@@ -11,6 +11,7 @@ from app_main.tools import log_update, get_card
 from app_main.tools import is_exist_log, get_word_obj, log_lowwer
 from app_main.tools import is_spell_right, get_next_memory_time, get_level_alter
 from app_main.permissions import IsAuthPermission
+from django.http import HttpResponseRedirect
 
 
 # 得到一张卡片
@@ -122,3 +123,18 @@ class UpdateCardCommitViewSet(GenericViewSet, mixins.CreateModelMixin):
         if next_memory_time - datetime.datetime.now() > datetime.timedelta(days=30):
             log_update('strengthen_card', user_obj, word_obj)
         return data
+
+
+#跳转到主页
+class IndexViewSet(GenericViewSet):
+
+    def list(self, request, *args, **kwargs):
+        if request.user:
+            return HttpResponseRedirect('/static/HTML/index/index.html')
+        else:
+            return HttpResponseRedirect('/static/HTML/main/main.html')
+
+
+
+
+
