@@ -167,6 +167,7 @@ class CensusViewSet(GenericViewSet,mixins.ListModelMixin):
         word_sum=EnglishWordModel.objects.all().count()
         data['word_sum']=word_sum
         data['residue'] = word_sum-temp
+        data['name'] = request.user.username
         return Response(data)
 
 

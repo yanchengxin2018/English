@@ -3,19 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>统计</title>
+    <link rel="stylesheet" type="text/css"
+          href="http://172.16.10.35:8000/static/HTML/census/census.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://172.16.10.35:8000/static/HTML/tools/tools.js"></script>
+
 </head>
 <body>
 <div id="screen">
-
-
+    <div id="main"  style="cursor: pointer;"
+         onclick="window.location='http://172.16.10.35:8000/main/index/';"></div>
     <div id="screen_title">
         <div id="screen_title_text"></div>
     </div>
 
 
-    <div id="census">
+    <div id="census_0"></div>
+    <div id="census_1">
         <div id="census_title"></div>
-        <div id="census_body"></div>
+        <div id="census_body">
+            <div id="level_0">
+                <div id="level_0_num" class="num"></div>
+                <div id="level_0_ji" class="ji"></div>
+                <div id="level_0_line" class="line"></div>
+                <div id="level_0_img" class="img"></div>
+                <div id="level_0_ci" class="ci"></div>
+            </div>
+            <div id="level_1">
+                <div id="level_1_num" class="num"></div>
+                <div id="level_1_ji" class="ji"></div>
+                <div id="level_1_line" class="line"></div>
+                <div id="level_1_img" class="img"></div>
+                <div id="level_1_ci" class="ci"></div>
+            </div>
+            <div id="level_2">
+                <div id="level_2_num" class="num"></div>
+                <div id="level_2_ji" class="ji"></div>
+                <div id="level_2_line" class="line"></div>
+                <div id="level_2_img" class="img"></div>
+                <div id="level_2_ci" class="ci"></div>
+            </div>
+            <div id="level_3">
+                <div id="level_3_num" class="num"></div>
+                <div id="level_3_ji" class="ji"></div>
+                <div id="level_3_line" class="line"></div>
+                <div id="level_3_img" class="img"></div>
+                <div id="level_3_ci" class="ci"></div>
+            </div>
+            <div id="level_4">
+                <div id="level_4_num" class="num"></div>
+                <div id="level_4_ji" class="ji"></div>
+                <div id="level_4_line" class="line"></div>
+                <div id="level_4_img" class="img"></div>
+                <div id="level_4_ci" class="ci"></div>
+
+            </div>
+            <div id="level_5">
+                <div id="level_5_num" class="num"></div>
+                <div id="level_5_ji" class="ji"></div>
+                <div id="level_5_line" class="line"></div>
+                <div id="level_5_img" class="img"></div>
+                <div id="level_5_ci" class="ci"></div>
+            </div>
+            <div id="level_6">
+                <div id="level_6_num" class="num"></div>
+                <div id="level_6_ji" class="ji"></div>
+                <div id="level_6_line" class="line"></div>
+                <div id="level_6_img" class="img"></div>
+                <div id="level_6_ci" class="ci"></div>
+            </div>
+            <div id="level_7">
+                <div id="level_7_num" class="num"></div>
+                <div id="level_7_ji" class="ji"></div>
+                <div id="level_7_line" class="line"></div>
+                <div id="level_7_img" class="img"></div>
+                <div id="level_7_ci" class="ci"></div>
+            </div>
+            <div id="level_8">
+                <div id="level_8_num" class="num"></div>
+                <div id="level_8_ji" class="ji"></div>
+                <div id="level_8_line" class="line"></div>
+                <div id="level_8_img" class="img"></div>
+                <div id="level_8_ci" class="ci"></div>
+            </div>
+            <div id="level_9">
+                <div id="level_9_num" class="num"></div>
+                <div id="level_9_ji" class="ji"></div>
+                <div id="level_9_line" class="line"></div>
+                <div id="level_9_img" class="img"></div>
+                <div id="level_9_ci" class="ci"></div>
+            </div>
+            <div id="level_10">
+                <div id="level_10_num" class="num"></div>
+                <div id="level_10_ji" class="ji"></div>
+                <div id="level_10_line" class="line"></div>
+                <div id="level_10_img" class="img"></div>
+                <div id="level_10_ci" class="ci"></div>
+            </div>
+            <div id="level_11">
+                <div id="level_11_num" class="num"></div>
+                <div id="level_11_ji" class="ji"></div>
+                <div id="level_11_line" class="line"></div>
+                <div id="level_11_img" class="img"></div>
+                <div id="level_11_ci" class="ci"></div>
+            </div>
+            <div id="level_12">
+                <div id="level_12_num" class="num"></div>
+                <div id="level_12_ji" class="ji"></div>
+                <div id="level_12_line" class="line"></div>
+                <div id="level_12_img" class="img"></div>
+                <div id="level_12_ci" class="ci"></div>
+            </div>
+            <div id="level_13">
+                <div id="level_13_num" class="num"></div>
+                <div id="level_13_ji" class="ji"></div>
+                <div id="level_13_line" class="line"></div>
+                <div id="level_13_img" class="img"></div>
+                <div id="level_13_ci" class="ci"></div>
+            </div>
+            <div id="level_14">
+                <div id="level_14_num" class="num"></div>
+                <div id="level_14_ji" class="ji"></div>
+                <div id="level_14_line" class="line"></div>
+                <div id="level_14_img" class="img"></div>
+                <div id="level_14_ci" class="ci"></div>
+            </div>
+
+
+        </div>
     </div>
 
 
@@ -24,6 +139,7 @@
 
 
 
+<script src="http://172.16.10.35:8000/static/HTML/census/census.js"></script>
 </div>
 </body>
 </html>

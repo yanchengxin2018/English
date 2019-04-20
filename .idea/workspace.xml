@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/info_card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/new_card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/setting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/update_card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/HTML/start/update_card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/HTML/tools/tools.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/English/level_setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/level_setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/English/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/app_main_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_main/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/app_main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/other_files/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/other_files/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/HTML/census/census.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/census/census.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/HTML/census/census.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/census/census.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/HTML/start/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/start/info_card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/HTML/start/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/start/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/HTML/census/census.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/census/census.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/HTML/census/ji.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/census/ji.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/HTML/census/jiantou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/HTML/census/title.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/HTML/census/title.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,17 +27,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="325">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/HTML/tools/tools.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="44" column="43" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="43" />
+              <folding>
+                <element signature="e#1074#1155#0" />
+                <element signature="n#!!block;n#get#0" />
+                <element signature="n#!!block;n#post#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/HTML/census/census.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/HTML/census/census.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/HTML/census/census.html">
+        <entry file="file://$PROJECT_DIR$/static/HTML/census/census.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="490">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3240">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#6172#6396#0" />
+                <element signature="e#6466#7292#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +99,8 @@
         <option value="Python Script" />
         <option value="HTML File" />
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,11 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/app_tools/app_tools_view.py" />
-        <option value="$PROJECT_DIR$/apps/app_databases/word_database.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/permissions.py" />
-        <option value="$PROJECT_DIR$/apps/app_tools/permissions.py" />
-        <option value="$PROJECT_DIR$/apps/app_user/models.py" />
         <option value="$PROJECT_DIR$/apps/app_user/serializers.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/models.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/serializers.py" />
@@ -116,16 +153,21 @@
         <option value="$PROJECT_DIR$/static/HTML/start/info_card.js" />
         <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
         <option value="$PROJECT_DIR$/apps/app_main/app_main_urls.py" />
-        <option value="$PROJECT_DIR$/apps/app_main/views.py" />
+        <option value="$PROJECT_DIR$/static/HTML/tools/auto_div.js" />
+        <option value="$PROJECT_DIR$/static/HTML/tools/auto_rule.js" />
+        <option value="$PROJECT_DIR$/static/HTML/tools/tools.js" />
         <option value="$PROJECT_DIR$/other_files/plan.txt" />
+        <option value="$PROJECT_DIR$/static/HTML/census/census.js" />
+        <option value="$PROJECT_DIR$/apps/app_main/views.py" />
         <option value="$PROJECT_DIR$/static/HTML/census/census.html" />
+        <option value="$PROJECT_DIR$/static/HTML/census/census.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="255" />
     <option name="y" value="196" />
-    <option name="width" value="1531" />
+    <option name="width" value="1521" />
     <option name="height" value="607" />
   </component>
   <component name="ProjectView">
@@ -143,6 +185,17 @@
             <path>
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="app_main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -156,7 +209,14 @@
               <item name="English" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="census" type="462c0819:PsiDirectoryNode" />
+              <item name="start" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../课程管理系统_调研项目" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mycode" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -240,12 +300,12 @@
       <workItem from="1555458656208" duration="26637000" />
       <workItem from="1555547360925" duration="5810000" />
       <workItem from="1555572589624" duration="40576000" />
-      <workItem from="1555658354244" duration="11554000" />
+      <workItem from="1555658354244" duration="31317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178489000" />
+    <option name="totallyTimeSpent" value="198252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -264,7 +324,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.499723" visible="true" weight="0.25297296" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.499723" visible="true" weight="0.22918919" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.500277" side_tool="true" weight="0.29405406" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
@@ -279,30 +339,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/app_tools/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_user/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_tools/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_tools/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -512,9 +548,6 @@
     <entry file="file://$PROJECT_DIR$/static/HTML/start/start.css" />
     <entry file="file://$PROJECT_DIR$/static/HTML/start/new_card.css" />
     <entry file="file://$PROJECT_DIR$/static/HTML/start/memory_card.ts" />
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/setting.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/HTML/start/update_card.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -560,33 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/new_card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!block;n#get_word_card#0" />
-            <element signature="n#!!block;n#get#0" />
-            <element signature="n#!!block;n#post#0" />
-            <element signature="n#!!block;n#font_init#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/HTML/start/update_card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -625,37 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="160" column="14" lean-forward="true" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#828#1067#0" />
-            <element signature="e#924#1067#0" />
-            <element signature="e#1151#1873#0" />
-            <element signature="e#1316#1552#0" />
-            <element signature="e#1601#1873#0" />
-            <element signature="e#1965#4039#0" />
-            <element signature="e#2117#2458#0" />
-            <element signature="e#2501#4039#0" />
-            <element signature="e#2837#3507#0" />
-            <element signature="e#3266#3344#0" />
-            <element signature="e#3379#3507#0" />
-            <element signature="e#3534#3738#0" />
-            <element signature="e#3823#4019#0" />
-            <element signature="e#4127#6089#0" />
-            <element signature="e#4275#4609#0" />
-            <element signature="e#4660#6089#0" />
-            <element signature="e#4994#5196#0" />
-            <element signature="e#5223#5427#0" />
-            <element signature="e#5554#5860#0" />
-            <element signature="e#6140#6364#0" />
-            <element signature="e#6190#6364#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/app_main/tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-936">
@@ -667,17 +642,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/setting.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/new_card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="48" column="101" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="89" selection-start-line="89" selection-end-line="118" />
+          <folding>
+            <element signature="n#!!block;n#start_onload#0" />
+            <element signature="n#!!block;n#card_show_success#0" />
+            <element signature="n#!!block;n#get_word_card#0" />
+            <element signature="n#!!block;n#get#0" />
+            <element signature="n#!!block;n#post#0" />
+            <element signature="n#!!block;n#div_init#0" />
+            <element signature="n#!!block;n#font_init#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/tools/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="43" />
+          <folding>
+            <element signature="e#1074#1155#0" />
+            <element signature="n#!!block;n#get#0" />
+            <element signature="n#!!block;n#post#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/other_files/plan.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="325">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/app_main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3240">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#6172#6396#0" />
+            <element signature="e#6466#7292#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1704">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/HTML/census/census.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="312">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/census/census.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/census/census.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
