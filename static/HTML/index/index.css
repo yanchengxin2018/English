@@ -28,7 +28,7 @@
     left: 15%;
     width: 40%;
     height: 10%;
-    transform: rotate(7deg);
+    transform: rotate(-7deg);
 }
 
 #index_census {
@@ -38,7 +38,7 @@
     left: 50%;
     width: 40%;
     height: 10%;
-    transform: rotate(-14deg);
+    transform: rotate(70deg);
 }
 
 #index_help {
@@ -48,7 +48,7 @@
     left: 15%;
     width: 40%;
     height: 10%;
-    transform: rotate(20deg);
+    transform: rotate(0deg);
 
 }
 
@@ -63,3 +63,13 @@
 
 }
 
+#index_talk {
+    /*border: red solid 1px;*/
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 40%;
+    height: 10%;
+    transform: rotate(-30deg);
+
+}

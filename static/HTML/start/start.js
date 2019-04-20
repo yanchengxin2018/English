@@ -3,7 +3,7 @@ ip = 'http://172.16.10.35:8000';
 new_card = '';
 update_card = '';
 info_card = '';
-rule = 500;
+rule = 0;
 
 function start_onload() {
     let screen_obj = $('#screen');

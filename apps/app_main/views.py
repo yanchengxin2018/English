@@ -14,6 +14,7 @@ from app_main.permissions import IsAuthPermission
 from django.http import HttpResponseRedirect
 from django.db.models import Max
 
+
 # 得到一张卡片
 class CardViewSet(GenericViewSet, mixins.ListModelMixin):
     permission_classes = (IsAuthPermission,)

@@ -1,4 +1,4 @@
-let rule=400;
+let rule=0;
 
 let census_div_settings=[
     {id:'screen',w:'100',h:'155',b_i:'http://172.16.10.35:8000/static/HTML/census/2.jpg '},
@@ -26,6 +26,10 @@ let census_font_settings=[
 window.onload=census_start;
 
 function census_start() {
+    if(rule===0)auto_width('screen');
+
+
+
     let url=`${ip}/main/census/`;
     get(url, {}, census_success, census_faild);
 
@@ -62,6 +66,8 @@ function census_success(data) {
             n=n*5;
             div_init([{id:`level_${level}_line`,l:10,t:2.1,w:n,b:'#43ff3d',},], r = rule);
             count_img='count_100.png';
+
+
         }
         else if(100<n&&n<=500)
         {
@@ -95,8 +101,14 @@ function census_success(data) {
             count_img='count_4000.png';
         }
 
-        div_init([{id:`level_${level}_img`,l:n+12,t:-0.1,w:5.3,
+
+
+
+            div_init([{id:`level_${level}_img`,l:n+12,t:0,w:5.3,
             b_i:`http://172.16.10.35:8000/static/HTML/census/${count_img}`},], r = rule);
+
+        $(`#level_${level}_num`).css('top',rule*-0.01+'px');
+        font_init([{id:`level_${level}_num`,size:4,'text-align':'right','font-family':'Microsoft JhengHei'}], r = rule)
 
     }
 

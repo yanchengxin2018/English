@@ -4,6 +4,7 @@
     /*border: red solid 1px;*/
     width: 100%;
     height: 100%;
+    background-image: url("http://172.16.10.35:8000/static/HTML/main/back.jpg");
 }
 
 #titil

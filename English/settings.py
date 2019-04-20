@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'app_tools',
     'app_databases',
     'app_main',
+    'app_talk',
 ]
 
 MIDDLEWARE = [

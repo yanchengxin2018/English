@@ -1,6 +1,8 @@
 //修改div尺寸{id:'',t:'',l:'',r:'',w:'',h:'',b_c:'',b_i:'',o:'',b:''}
-ip='http://172.16.10.35:8000';
+ip = 'http://172.16.10.35:8000';
+
 function div_init(div_list, r = 500) {
+
     for (let i = 0; i < div_list.length; i++) {
         let data = div_list[i];
         let obj = $(`#${data['id']}`);
@@ -94,8 +96,15 @@ function post(url, data, success_function, faild_function) {
 }
 
 
+function auto_width(div_id) {
 
 
+    if(rule===0) {
+        let obj = $(`#${div_id}`);
+        obj.css('width','100%');
+        rule=obj.css('width').replace('px','');
+    }
+}
 
 
 
