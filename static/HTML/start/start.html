@@ -3,15 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>卡片</title>
-{#    <link rel="stylesheet" type="text/css"#}
-{#          href="http://172.16.10.35:8000/static/HTML/log/log.css">#}
+
+    <link rel="stylesheet" type="text/css"
+          href="http://172.16.10.35:8000/static/HTML/start/update_card.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://172.16.10.35:8000/static/HTML/start/info_card.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-{#    <script src="http://172.16.10.35:8000/static/HTML/log/log.js" type="text/javascript"></script>#}
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+
     <meta name="viewport"
           content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no"/>
+
+
 </head>
 <body>
-卡片
+<div id="screen">
+
+    <div id="new_card" v-if="show">
+        <div id="new_card_head" onclick="head_function()"></div>
+        <div id="new_card_body">
+            <div id="new_body_english">
+                <div id="new_body_english_text"> {{ english }}</div>
+            </div>
+            <div id="new_body_chinese">
+                <div id="new_body_chinese_text">{{ chinese }}</div>
+            </div>
+            <div id="new_body_pronunciation">
+                <div id="new_body_pronunciation_text">{{ pronunciation }}</div>
+            </div>
+        </div>
+        <div id="new_card_ok" onclick="new_card_commit()">
+            <div id="new_card_ok_text">好了</div>
+        </div>
+    </div>
+
+
+    <div id="update_card" v-if="show">
+        <div id="update_card_chinese">
+            <div id="update_card_chinese_text">{{ chinese }}</div>
+        </div>
+
+
+        <div id="update_card_screen">
+            <div id="update_card_screen_text">{{ screen }}</div>
+        </div>
+        <div id="update_card_keys">
+            <div id="del" onclick="del_function()">Del</div>
+            <div id="caps" onclick="caps_function()">Caps</div>
+            <div id="dian" onclick="kongge_function(this)" v="'">'</div>
+            <div id="gang" onclick="kongge_function(this)" v="-">-</div>
+            <div id="kong" onclick="kongge_function(this)" v=" ">空格</div>
+        </div>
+        <div id="update_card_ok" onclick="update_card_commit()">
+            <div id="update_card_ok_text">确&nbsp&nbsp认</div>
+        </div>
+    </div>
+
+
+    <div id="info_card" v-if="show">
+        <div id="info_card_success_status">
+            <div id="info_card_success_status_text">{{ is_right_show }}</div>
+        </div>
+
+        <div id="info_card_body">
+            <div id="info_card_body_word">
+                <div id="info_card_body_word_text">{{ english }}</div>
+            </div>
+            <div id="info_card_body_input">
+                <div id="info_card_body_input_text">{{ spell }}</div>
+            </div>
+            <div id="info_card_body_level">
+                <div id="info_card_body_level_text">{{ level_alter }}</div>
+            </div>
+            <div id="info_card_body_time">
+                <div id="info_card_body_time_text">{{ next_memory_time }}</div>
+            </div>
+            <div id="info_card_body_pronunciation">
+                <div id="info_card_body_pronunciation_text">{{ pronunciation }}</div>
+            </div>
+            <div id="info_card_body_chinese">
+                <div id="info_card_body_chinese_text">{{ chinese }}</div>
+            </div>
+        </div>
+
+        <div id="info_card_submit" onclick="get_word_card()">
+            <div id="info_card_submit_text">继&nbsp&nbsp续</div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="http://172.16.10.35:8000/static/HTML/start/setting.js" type="text/javascript"></script>
+<script src="http://172.16.10.35:8000/static/HTML/start/start.js" type="text/javascript"></script>
+<script src="http://172.16.10.35:8000/static/HTML/start/new_card.js" type="text/javascript"></script>
+<script src="http://172.16.10.35:8000/static/HTML/start/update_card.js" type="text/javascript"></script>
+<script src="http://172.16.10.35:8000/static/HTML/start/info_card.js" type="text/javascript"></script>
+
 </body>
 </html>
 

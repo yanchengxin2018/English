@@ -17,46 +17,50 @@ def get_card(user_obj):
     card = get_update_card(user_obj)
     if card:
         return card
-    card = get_memory_card(user_obj)
+    card = get_new_card(user_obj)
     if card:
         return card
 
 
 # 得到一张加强卡
 def get_strengthens_card(user_obj):
+    now_time = datetime.datetime.now()
+
     group = StrengthenMemoryModel.objects.filter(user_obj=user_obj).values(
         'english_obj').annotate(created_at=Max('created_at'))
     created_ats = {data.get('created_at') for data in group}
+
     strengthen_obj = StrengthenMemoryModel.objects.filter(
-        created_at__in=created_ats).order_by('next_memory_time').first()
+        created_at__in=created_ats,next_memory_time__lt=now_time).order_by('created_at').last()
+
     if not strengthen_obj:
         return None
-    now_time = datetime.datetime.now()
-    if strengthen_obj.next_memory_time < now_time:
+    else:
         serializer_obj = StrengthenCardSerializer(strengthen_obj)
         return serializer_obj.data
-    else:
-        return None
 
 
 # 得到一张升级卡
 def get_update_card(user_obj):
+    now_time = datetime.datetime.now()
+
     group = EnglishWordRecordModel.objects.filter(user_obj=user_obj).values(
         'english_obj').annotate(created_at=Max('created_at'))
     created_ats = {data.get('created_at') for data in group}
-    record_obj = EnglishWordRecordModel.objects.filter(created_at__in=created_ats).order_by('next_memory_time').first()
+
+
+    record_obj = EnglishWordRecordModel.objects.filter(
+        created_at__in=created_ats,next_memory_time__lt=now_time).order_by('created_at').last()
+
     if not record_obj:
         return None
-    now_time = datetime.datetime.now()
-    if record_obj.next_memory_time < now_time:
+    else:
         serializer_obj = UpdateCardSerializer(record_obj)
         return serializer_obj.data
-    else:
-        return None
 
 
-# 得到一张记忆卡
-def get_memory_card(user_obj):
+# 得到一张新卡
+def get_new_card(user_obj):
     # 从加强库以及历史库没有的词
     englishwords_obj = EnglishWordModel.objects.filter(Q(englishwordrecordmodel__user_obj=user_obj) |
                                                        Q(strengthenmemorymodel__user_obj=user_obj))
@@ -89,7 +93,8 @@ def log_update(card_type, user_obj, word_obj):
                 level = 14
 
             seconds = getattr(settings, 'LEVEL_{}'.format(level))
-            next_memory_time = previous_memory_time + datetime.timedelta(seconds=seconds)
+            # next_memory_time = previous_memory_time + datetime.timedelta(seconds=seconds)
+            next_memory_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
             data = {'user_obj': user_obj, 'english_obj': word_obj, 'level': level, 'next_memory_time': next_memory_time}
             EnglishWordRecordModel.objects.create(**data)
     elif card_type == 'strengthen_card':
@@ -109,7 +114,8 @@ def log_update(card_type, user_obj, word_obj):
                 level = 5
 
             seconds = getattr(settings, 'LEVEL_{}'.format(level))
-            next_memory_time = previous_memory_time + datetime.timedelta(seconds=seconds)
+            # next_memory_time = previous_memory_time + datetime.timedelta(seconds=seconds)
+            next_memory_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
             data = {'user_obj': user_obj, 'english_obj': word_obj, 'level': level, 'next_memory_time': next_memory_time}
             StrengthenMemoryModel.objects.create(**data)
     else:
@@ -194,9 +200,9 @@ def get_level_alter(card_type, user_obj, word_obj):
         raise custom_exceptions.Status_400('没有记录')
     elif len(logs_obj) == 1:
         log_obj = logs_obj.first()
-        return '级别{}-->级别{}'.format(log_obj.level, log_obj.level)
+        return '级别{}→级别{}'.format(log_obj.level, log_obj.level)
     else:
-        return '级别{}-->级别{}'.format(logs_obj[1].level, logs_obj[0].level)
+        return '级别{}→级别{}'.format(logs_obj[1].level, logs_obj[0].level)
 
 
 # 当前用户的当前单词是否存在于记录中
@@ -236,3 +242,59 @@ def get_word_obj(word_index):
     if not word_obj:
         raise custom_exceptions.Status_404('没有找到这个单词')
     return word_obj
+
+
+#把一个时间转化为距离现在xxx时间后的字符串格式
+def later_time(time_obj):
+
+    now_time=datetime.datetime.now()
+    if time_obj<now_time:
+        return '即将重新测试'
+        # diff = now_time-time_obj
+        # seconds = diff.seconds
+        # d = seconds // (3600 * 24)
+        # h = seconds % (3600 * 24) // 3600
+        # m = seconds % 3600 // 60
+        # s = seconds % 60
+        # info=[]
+        # if s:
+        #     info.append('{}秒'.format(s))
+        # if m:
+        #     info.append('{}分'.format(m))
+        # if h:
+        #     info.append('{}时'.format(h))
+        # if d:
+        #     info.append('{}天'.format(d))
+        # if len(info)>=2:
+        #     info=info[::-1][:2]
+        # info=''.join(info)
+        # return time_obj.strftime('{}前的测试点已错过'.format(info))
+    else:
+        diff=time_obj-now_time
+        seconds = diff.seconds
+        d = seconds // (3600 * 24)
+        h = seconds % (3600 * 24) // 3600
+        m = seconds % 3600 // 60
+        s = seconds % 60
+        info=[]
+        if s:
+            info.append('{}秒'.format(s))
+        if m:
+            info.append('{}分'.format(m))
+        if h:
+            info.append('{}时'.format(h))
+        if d:
+            info.append('{}天'.format(d))
+        if len(info)>=2:
+            info=info[::-1][:2]
+        info=''.join(info)
+        return '在{}后再次测试'.format(info)
+
+
+
+
+
+
+
+
+

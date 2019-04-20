@@ -2,7 +2,7 @@ import os,sys
 
 from English.restframework_setting import REST_FRAMEWORK,JWT_AUTH
 from English.level_setting import *
-IP='172.16.10.35:8000'
+IP='http://172.16.10.35:8000'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
