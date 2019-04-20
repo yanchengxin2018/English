@@ -1,5 +1,5 @@
 window.onload=start;
-rule=500;
+rule=0;
 
 
 let index_div_setting=[

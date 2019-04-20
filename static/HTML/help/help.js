@@ -8,6 +8,7 @@ let help_div_setting=[
     {id:'help_text_copy',l:10,t:15,w:80,h:110},
     {id:'help_text_title',l:10,t:15,w:60,h:10},
     {id:'help_text_context',l:10,t:35,w:60,h:50},
+    {id:'main',l:2,t:2,w:12,h:12,b_i:"http://172.16.10.35:8000/static/HTML/census/main.png"},
 ];
 
 let help_font_setting=[

@@ -17,7 +17,7 @@ let census_div_settings=[
 
 let census_font_settings=[
     {id:'screen_title_text',size:6,'text-align':'center','font-family':'Microsoft JhengHei'},
-    {id:'census_title',size:6,'text-align':'center','font-family':'Microsoft JhengHei'},
+    {id:'census_title',size:5,'text-align':'center','font-family':'Microsoft JhengHei'},
 
 
 ];
