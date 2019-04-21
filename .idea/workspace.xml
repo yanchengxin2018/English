@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/English/uwsgi_local.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/English/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_tools/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/app_tools/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_tools/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/English/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,32 +15,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/English/wsgi.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="52" column="7" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/English/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/English/uwsgi_local.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+            <state relative-caret-position="264">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/English/uwsgi_online.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/English/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,7 +91,6 @@
         <option value="$PROJECT_DIR$/apps/app_databases/talk_database.py" />
         <option value="$PROJECT_DIR$/apps/app_talk/serializers.py" />
         <option value="$PROJECT_DIR$/static/HTML/test.html" />
-        <option value="$PROJECT_DIR$/English/settings.py" />
         <option value="$PROJECT_DIR$/static/HTML/main/main.html" />
         <option value="$PROJECT_DIR$/static/HTML/log/log.js" />
         <option value="$PROJECT_DIR$/static/HTML/reg/reg.js" />
@@ -108,7 +103,6 @@
         <option value="$PROJECT_DIR$/static/HTML/start/start.html" />
         <option value="$PROJECT_DIR$/static/HTML/start/info_card.js" />
         <option value="$PROJECT_DIR$/static/HTML/start/update_card.js" />
-        <option value="$PROJECT_DIR$/static/HTML/start/start.js" />
         <option value="$PROJECT_DIR$/static/HTML/census/census.js" />
         <option value="$PROJECT_DIR$/apps/app_main/views.py" />
         <option value="$PROJECT_DIR$/static/HTML/talk/talk.js" />
@@ -117,8 +111,10 @@
         <option value="$PROJECT_DIR$/apps/app_tools/views.py" />
         <option value="$PROJECT_DIR$/apps/app_tools/serializers.py" />
         <option value="$PROJECT_DIR$/English/uwsgi.ini" />
-        <option value="$PROJECT_DIR$/English/uwsgi_local.ini" />
         <option value="$PROJECT_DIR$/English/urls.py" />
+        <option value="$PROJECT_DIR$/English/uwsgi_local.ini" />
+        <option value="$PROJECT_DIR$/static/HTML/start/start.js" />
+        <option value="$PROJECT_DIR$/English/settings.py" />
       </list>
     </option>
   </component>
@@ -144,6 +140,24 @@
               <item name="English" type="b2602c69:ProjectViewProjectNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
               <item name="English" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="English" type="b2602c69:ProjectViewProjectNode" />
+              <item name="English" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="start" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,12 +241,12 @@
       <workItem from="1555458656208" duration="26637000" />
       <workItem from="1555547360925" duration="5810000" />
       <workItem from="1555572589624" duration="40576000" />
-      <workItem from="1555658354244" duration="67236000" />
+      <workItem from="1555658354244" duration="68933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234171000" />
+    <option name="totallyTimeSpent" value="235868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -511,39 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="n#!!block;n#get#0" />
-            <element signature="n#!!block;n#post#0" />
-            <element signature="n#!!block;n#div_init#0" />
-            <element signature="n#!!block;n#font_init#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/HTML/start/new_card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/HTML/start/update_card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-          <folding>
-            <element signature="e#22#150#0" />
-            <element signature="e#58#148#0" />
-            <element signature="n#!!block;n#update_card_build_keys#0" />
-            <element signature="e#303#888#0" />
-            <element signature="e#948#1537#0" />
-            <element signature="e#1595#2176#0" />
-            <element signature="n#!!block;n#caps_function#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,34 +634,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/settings.py">
+    <entry file="file://$PROJECT_DIR$/English/wsgi.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+        <state relative-caret-position="315">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/update_card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#22#150#0" />
+            <element signature="e#58#148#0" />
+            <element signature="n#!!block;n#update_card_build_keys#0" />
+            <element signature="e#303#888#0" />
+            <element signature="e#948#1537#0" />
+            <element signature="e#1595#2176#0" />
+            <element signature="n#!!block;n#caps_function#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/uwsgi_online.ini">
+    <entry file="file://$PROJECT_DIR$/static/HTML/start/start.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="13" selection-end-line="24" />
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!block;n#get#0" />
+            <element signature="n#!!block;n#post#0" />
+            <element signature="n#!!block;n#div_init#0" />
+            <element signature="n#!!block;n#font_init#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/English/uwsgi_local.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="264">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/wsgi.log">
+    <entry file="file://$PROJECT_DIR$/English/uwsgi_online.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="52" column="7" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="67" />
+        <state relative-caret-position="240">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/English/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
