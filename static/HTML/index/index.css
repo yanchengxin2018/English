@@ -16,7 +16,7 @@
     width: 90%;
     height: 10%;
     transform: rotate(-2deg);
-    background-image: url("http://172.16.10.35:8000/static/HTML/index/title.png");
+    background-image: url("http://129.211.14.136:8006/static/HTML/index/title.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
 }

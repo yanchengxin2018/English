@@ -135,7 +135,7 @@ class IP2IPViewSet(G,M.ListModelMixin,M.CreateModelMixin):
         html_js_files=[]
         for file in files:
             file_type=file.split('.')[-1]
-            if file_type=='js' or file_type=='html':
+            if file_type=='js' or file_type=='html' or file_type=='css':
                 html_js_files.append(file)
         return html_js_files
 

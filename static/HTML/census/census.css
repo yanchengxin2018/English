@@ -16,7 +16,7 @@
     width: 8%;
     /*border: #6fff4b solid 1px;*/
     position: absolute;
-    background-image: url("http://172.16.10.35:8000/static/HTML/census/ji.png");
+    background-image: url("http://129.211.14.136:8006/static/HTML/census/ji.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
@@ -37,7 +37,7 @@
     width: 10%;
     /*border: #6fff4b solid 3px;*/
     position: absolute;
-    background-image: url("http://172.16.10.35:8000/static/HTML/census/jiantou.png");
+    background-image: url("http://129.211.14.136:8006/static/HTML/census/jiantou.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
@@ -58,7 +58,7 @@
     height: 8%;
     width: 12%;
     position: absolute;
-    background-image: url("http://172.16.10.35:8000/static/HTML/census/main.png");
+    background-image: url("http://129.211.14.136:8006/static/HTML/census/main.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
 
