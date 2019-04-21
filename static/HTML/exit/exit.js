@@ -41,7 +41,11 @@ function exit_success() {
 function exit_faild(data) {
     let screen_obj = $('#screen');
     screen_obj.css('border','#ff383f solid 1px');
-    screen_obj.append('未知原因造成注册失败!');
+    screen_obj.append('未知原因造成操作失败!');
+    screen_obj.append('2秒钟后跳转到主页...');
+    setTimeout(function () {
+    window.location.href = `${ip}/url/main`;
+    },2000)
 }
 
 
