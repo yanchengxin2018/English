@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9698cf00-f4be-4db5-8169-51106881b392" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/English/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/English/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/English/uwsgi.pid" beforeDir="false" afterPath="$PROJECT_DIR$/English/uwsgi.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/English/wsgi.log" beforeDir="false" afterPath="$PROJECT_DIR$/English/wsgi.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/app_user/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/migrations/0002_remove_usermodel_pet_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/migrations/0003_usermodel_pet_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/migrations/0004_receivefilemodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/app_user/migrations/0005_auto_20190417_1007.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,32 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/app_tools/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="153" column="19" lean-forward="true" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/HTML/census/census.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/English/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -68,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/English/level_setting.py" />
         <option value="$PROJECT_DIR$/static/HTML/start/new_card.js" />
         <option value="$PROJECT_DIR$/apps/app_main/serializers.py" />
         <option value="$PROJECT_DIR$/apps/app_main/tools.py" />
@@ -118,6 +102,7 @@
         <option value="$PROJECT_DIR$/static/HTML/start/start.js" />
         <option value="$PROJECT_DIR$/apps/app_user/views.py" />
         <option value="$PROJECT_DIR$/static/HTML/exit/exit.js" />
+        <option value="$PROJECT_DIR$/English/wsgi.log" />
         <option value="$PROJECT_DIR$/English/settings.py" />
       </list>
     </option>
@@ -227,17 +212,18 @@
       <workItem from="1555458656208" duration="26637000" />
       <workItem from="1555547360925" duration="5810000" />
       <workItem from="1555572589624" duration="40576000" />
-      <workItem from="1555658354244" duration="70580000" />
+      <workItem from="1555658354244" duration="70876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237515000" />
+    <option name="totallyTimeSpent" value="237811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17451523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17451523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,7 +236,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.499723" visible="true" weight="0.45837837" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.499723" visible="true" weight="0.45837837" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.500277" side_tool="true" weight="0.29405406" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
@@ -573,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/English/wsgi.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/HTML/start/update_card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2112">
@@ -643,7 +622,7 @@
     <entry file="file://$PROJECT_DIR$/apps/app_tools/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
-          <caret line="153" column="19" lean-forward="true" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
+          <caret line="153" column="19" selection-start-line="153" selection-start-column="19" selection-end-line="153" selection-end-column="19" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -653,14 +632,17 @@
     <entry file="file://$PROJECT_DIR$/static/HTML/census/census.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/English/wsgi.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/English/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
