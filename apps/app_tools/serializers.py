@@ -55,3 +55,21 @@ class ReceiveFileSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReceiveFileModel
         fields = ('id', 'file', 'path',)
+
+
+#更换ip
+class IP2IPSerializer(serializers.Serializer):
+    ip_1=serializers.CharField(help_text='要修改的字符串是什么？')
+    ip_2=serializers.CharField(help_text='要把这个字符串修改为什么？')
+    user_setting_ip=serializers.BooleanField(default=False,help_text='点选此处,意味着将把这个字符串修改为配置里的IP')
+
+
+
+
+
+
+
+
+
+
+

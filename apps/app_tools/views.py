@@ -5,8 +5,9 @@ from rest_framework.response import Response
 from app_tools.serializers import MakeEnglishWordSerializer, EnglishWordSerializer, LevelSerializer
 from app_databases.models import EnglishWordModel, LevelModel
 from app_tools.permissions import IsManagerPermission
-from app_tools.serializers import ReceiveFileSerializer
+from app_tools.serializers import ReceiveFileSerializer,IP2IPSerializer
 from app_tools.models import ReceiveFileModel
+import os
 
 
 # 制作单词数据库
@@ -93,16 +94,79 @@ class ReceiveViewSet(ModelViewSet):
 
 
 #改变静态文件里的ip地址
-class IP2IPViewSet(G,M.ListModelMixin):
+class IP2IPViewSet(G,M.ListModelMixin,M.CreateModelMixin):
+    queryset = ReceiveFileModel.objects.all().order_by('-created_at')
+    serializer_class = IP2IPSerializer
+
 
     def list(self, request, *args, **kwargs):
-        return Response('xxx')
+        path='static/HTML'
+        ip_1=request.GET.get('ip_1',None)
+        files=self.get_files(path)
+        all_ips=self.get_all_ips(files,ip_1,)
+        return Response({'count':len(all_ips),'all_ips':all_ips})
+
+    def create(self, request, *args, **kwargs):
+        ip_1=request.data.get('ip_1')
+        ip_2=request.data.get('ip_2')
+        user_setting_ip=request.data.get('user_setting_ip',False)
+        if user_setting_ip:
+            ip_2=settings.IP
+        dir_name='static/HTML'
+        files=self.get_files(dir_name)
+        all_ips=self.get_all_ips(files,ip_1)
+        all_ips_count=len(all_ips)
+        for file in files:
+            self.file_replace(file,ip_1,ip_2)
+
+        return Response('{}-->{}(共{}处修改)'.format(ip_1,ip_2,all_ips_count))
 
 
+    def get_files(self,dir_name):
+        dir_or_file_list=os.listdir(dir_name)
+        files=[]
+        for dir_or_file in dir_or_file_list:
+            path='{}/{}'.format(dir_name,dir_or_file)
+            status=os.path.isdir(path)
+            if status:
+                files=files+self.get_files(path)
+            else:
+                files.append(path)
+        html_js_files=[]
+        for file in files:
+            file_type=file.split('.')[-1]
+            if file_type=='js' or file_type=='html':
+                html_js_files.append(file)
+        return html_js_files
 
+    def get_all_ips(self,files,ip_1):
+        all_ips=[]
+        for file in files:
+            lines=self.get_ip(file,ip_1,'')
+            all_ips=all_ips+lines
+        return all_ips
 
+    def get_ip(self,file,ip_1,ip_2):
+        lines=[]
+        with open(file,'r') as f:
+            datas=f.readlines()
+            for data in datas:
+                new_data=data.replace(ip_1,ip_2)
+                if data != new_data:
+                    lines.append(file+'-->'+data)
+        return lines
 
-
+    def file_replace(self,file,ip_1,ip_2):
+        context=[]
+        with open(file,'r') as f:
+            datas=f.readlines()
+            for data in datas:
+                new_data=data.replace(ip_1,ip_2)
+                context.append(new_data)
+        with open(file,'w') as f:
+            for line in context:
+                f.write(line)
+        return True
 
 
 
