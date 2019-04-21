@@ -92,5 +92,19 @@ class ReceiveViewSet(ModelViewSet):
     serializer_class = ReceiveFileSerializer
 
 
+#改变静态文件里的ip地址
+class IP2IPViewSet(G,M.ListModelMixin):
+
+    def list(self, request, *args, **kwargs):
+        return Response('xxx')
+
+
+
+
+
+
+
+
+
 
 

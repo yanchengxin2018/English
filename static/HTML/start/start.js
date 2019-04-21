@@ -3,7 +3,7 @@ ip = 'http://172.16.10.35:8000';
 new_card = '';
 update_card = '';
 info_card = '';
-rule = 0;
+rule = 500;
 
 function start_onload() {
     let screen_obj = $('#screen');
@@ -30,18 +30,30 @@ function card_show_success(data) {
     let card_type = data['card_type'];
     if (card_type === 'new_card') {
         new_card.word_index = data['word_index'];
-        new_card.english = data['english'];
-        new_card.chinese = data['chinese'];
-        new_card.pronunciation = data['pronunciation'];
+        // new_card.english = data['english'];
+        // new_card.chinese = data['chinese'];
+        // new_card.pronunciation = data['pronunciation'];
         new_card.back_image = data['back_image'];
+
+
+        $('#new_body_english_text').empty();
+        $('#new_body_english_text').append(data['english']);
+        $('#new_body_chinese_text').empty();
+        $('#new_body_chinese_text').append(data['chinese']);
+        $('#new_body_pronunciation_text').empty();
+        $('#new_body_pronunciation_text').append(data['pronunciation']);
+
+
+
+
         show_new_card();
     } else if (card_type === 'update_card') {
+        $('#update_card_screen_text').empty();
+        $('#update_card_chinese_text').empty();
+        $('#update_card_chinese_text').append(data['chinese']);
         update_card.chinese = data['chinese'];
         update_card.word_index = data['word_index'];
         update_card.update_image = data['update_image'];
-
-
-
         show_update_card();
     }
     else if (card_type === 'strengthen_card') {
@@ -52,15 +64,19 @@ function card_show_success(data) {
 
 
     else if (card_type === 'info_card') {
-        info_card.is_right = data['is_right'];
-        info_card.english = data['english'];
-        info_card.spell = data['spell'];
-        info_card.level_alter = data['level_alter'];
-        info_card.next_memory_time = data['next_memory_time'];
-        info_card.pronunciation = data['pronunciation'];
-        info_card.chinese = data['chinese'];
-        info_card.info_image = data['info_image'];
-
+        info_card.is_right=data['is_right'];
+        $('#info_card_body_word_text').empty();
+        $('#info_card_body_word_text').append(data['english']);
+        $('#info_card_body_input_text').empty();
+        $('#info_card_body_input_text').append(data['spell']);
+        $('#info_card_body_level_text').empty();
+        $('#info_card_body_level_text').append(data['level_alter']);
+        $('#info_card_body_time_text').empty();
+        $('#info_card_body_time_text').append(data['next_memory_time']);
+        $('#info_card_body_pronunciation_text').empty();
+        $('#info_card_body_pronunciation_text').append(data['pronunciation']);
+        $('#info_card_body_chinese_text').empty();
+        $('#info_card_body_chinese_text').append(data['chinese']);
         show_info_card();
     }
 

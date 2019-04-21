@@ -1,4 +1,4 @@
-//修改div尺寸{id:'',t:'',l:'',r:'',w:'',h:'',b_c:'',b_i:'',o:'',b:''}
+//修改div尺寸{id:'',t:,l:,r:,w:,h:,b_c:'',b_i:'',o:,b:''}
 ip = 'http://172.16.10.35:8000';
 
 function div_init(div_list, r = 500) {
@@ -40,12 +40,30 @@ function div_init(div_list, r = 500) {
         //透明
         obj.css('opacity', data['tou']);
 
+
+        //旋转
+        let rotate = data['x'];
+        if (border !== 0) obj.css('transform', `rotate(${rotate}deg)`);
+
+        //链接
+        let src = data['s'];
+        if (src) {
+            obj.css('cursor', 'pointer');
+            obj.attr('onclick', `window.location=\'${src}\'`);
+        }
+
+        //隐藏
+        let overflow = data['overflow'];
+        if (overflow) {
+            obj.css('overflow', overflow);
+        }
+
     }
 }
 
 
 //修改文字尺寸{id:'',size:,'text-align':'center','font-family':'Microsoft JhengHei'}
-function font_init(div_list, r = 100) {
+function font_init(div_list, r = 500) {
     for (let i = 0; i < div_list.length; i++) {
         let data = div_list[i];
         let obj = $(`#${data['id']}`);

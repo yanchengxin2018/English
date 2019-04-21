@@ -148,18 +148,23 @@ let info_card_font_setting = [
 
 //显示新卡片
 function show_info_card() {
-    clear()
+    clear();
     $('#info_card').css('left','0');
     $('#info_card').css('background-image',`url("${info_card.info_image}")`);
     if (info_card.is_right) {
         $('#info_card_success_status').css('background-color', '#beffc4');
         $('#info_card_body_input').css('background-color', '#beffc4');
-        info_card.is_right_show = '正 确'
+        $('#info_card_success_status_text').empty();
+        $('#info_card_success_status_text').append('正 确');
+        // info_card.is_right_show = '正 确'
     } else {
         $('#info_card_success_status').css('background-color', '#fff4d8');
         $('#info_card_body_input').css('background-color', '#fff4d8');
-        info_card.is_right_show = '错 误'
+        $('#info_card_success_status_text').empty();
+        $('#info_card_success_status_text').append('错 误');
+        // info_card.is_right_show = '错 误'
     }
+
 }
 
 

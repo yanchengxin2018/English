@@ -34,7 +34,7 @@ function exit_success() {
     screen_obj.css('color', 'dodgerblue');
     screen_obj.append('退出成功!2秒钟后跳转到主页...');
     setTimeout(function () {
-    window.location.href = `${ip}/static/HTML/main/main.html`;
+    window.location.href = `${ip}/url/main`;
     },2000)
 }
 

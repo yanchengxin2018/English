@@ -107,14 +107,17 @@ function key_function(event) {
     if (!update_card.Caps) {
         value = value.toLowerCase();
     }
-    update_card.screen = update_card.screen + value;
+
+    $('#update_card_screen_text').append(value);
+    // update_card.screen = update_card.screen + value;
 }
 
 //空格/'/-事件
 function kongge_function(event) {
     let obj = $(`#${event.id}`);
     let value = obj.attr('v');
-    update_card.screen = update_card.screen + value;
+    $('#update_card_screen_text').append(value);
+    // update_card.screen = update_card.screen + value;
 }
 
 
@@ -146,17 +149,17 @@ function caps_function() {
 
 //删除事件
 function del_function() {
-    let text = update_card.screen;
-    if (text) {
-        // text=test_screen_text.text();
-        update_card.screen = text.substr(0, text.length - 1);
-    }
+    let screen_obj=$('#update_card_screen_text');
+    let val=screen_obj.text();
+    val=val.substr(0, val.length - 1);
+    screen_obj.empty();
+    screen_obj.append(val);
 }
 
 
 //升级卡提交
 function update_card_commit() {
-    let data = {'word_index': update_card.word_index, 'spell': update_card.screen};
+    let data = {'word_index': update_card.word_index, 'spell': $('#update_card_screen_text').text()};
     post(`${ip}/main/update_card_commit/`, data, card_show_success, card_show_faild);
 }
 

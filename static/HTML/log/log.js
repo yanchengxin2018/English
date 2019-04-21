@@ -65,7 +65,7 @@ function commit_success() {
     screen_obj.css('color', 'dodgerblue');
     screen_obj.append('登录成功!2秒钟后跳转到菜单页...');
     setTimeout(function () {
-    window.location.href = `${ip}/static/HTML/index/index.html`;
+    window.location.href = `${ip}/url/index/`;
     },2000)
 }
 

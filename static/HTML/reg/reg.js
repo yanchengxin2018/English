@@ -65,7 +65,7 @@ function commit_success() {
     screen_obj.css('color', 'dodgerblue');
     screen_obj.append('注册成功!2秒钟后跳转到登录页面...');
     setTimeout(function () {
-    window.location.href = `${ip}/static/HTML/log/log.html`;
+    window.location.href = `${ip}/url/log`;
     },2000)
 }
 

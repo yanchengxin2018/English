@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'app_databases',
     'app_main',
     'app_talk',
+    'app_url',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
+            'static/HTML',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
