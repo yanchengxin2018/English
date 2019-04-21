@@ -1,5 +1,5 @@
 //修改div尺寸{id:'',t:,l:,r:,w:,h:,b_c:'',b_i:'',o:,b:''}
-ip = 'http://172.16.10.35:8000';
+ip = 'http://129.211.14.136:8006';
 
 function div_init(div_list, r = 500) {
 

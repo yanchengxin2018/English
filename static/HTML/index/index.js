@@ -3,7 +3,7 @@ rule=0;
 
 
 let index_div_setting=[
-    {id:'index',w:100,h:155,b_i:'http://172.16.10.35:8000/static/HTML/index/back.png'},
+    {id:'index',w:100,h:155,b_i:'http://129.211.14.136:8006/static/HTML/index/back.png'},
 
     {id:'index_start',t:8,l:3,w:20,h:10,b_c:'#fff4d8',o:2,tou:0.9},
 

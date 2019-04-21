@@ -1,5 +1,5 @@
 window.onload=start;
-ip='http://172.16.10.35:8000';
+ip='http://129.211.14.136:8006';
 
 
 function start() {

@@ -1,7 +1,7 @@
 let rule = 0;
 
 let census_div_settings = [
-    {id: 'screen', w: '100', h: '155', b_i: 'http://172.16.10.35:8000/static/HTML/census/2.jpg '},
+    {id: 'screen', w: '100', h: '155', b_i: 'http://129.211.14.136:8006/static/HTML/census/2.jpg '},
 
     {
         id: 'screen_title',
@@ -9,7 +9,7 @@ let census_div_settings = [
         t: 12,
         w: '80',
         h: '15',
-        b_i: 'http://172.16.10.35:8000/static/HTML/census/title.png'
+        b_i: 'http://129.211.14.136:8006/static/HTML/census/title.png'
     },
     {id: 'screen_title_text', t: -1, l: 3, r: '', w: '35', h: '10'},
     //
@@ -111,7 +111,7 @@ function census_success(data) {
 
         div_init([{
             id: `level_${level}_img`, l: n + 12, t: 0, w: 5.3,
-            b_i: `http://172.16.10.35:8000/static/HTML/census/${count_img}`
+            b_i: `http://129.211.14.136:8006/static/HTML/census/${count_img}`
         },], r = rule);
 
         $(`#level_${level}_num`).css('top', rule * -0.01 + 'px');

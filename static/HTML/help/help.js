@@ -3,12 +3,12 @@ window.onload=help_start;
 
 
 let help_div_setting=[
-    {id:'help',w:100,h:155,b_i:'http://172.16.10.35:8000/static/HTML/census/help.jpeg',},
+    {id:'help',w:100,h:155,b_i:'http://129.211.14.136:8006/static/HTML/census/help.jpeg',},
     {id:'help_text',l:10,t:15,w:80,h:110,b_c:'#fff4d8',tou:0.7,o:5,},
     {id:'help_text_copy',l:10,t:15,w:80,h:110},
     {id:'help_text_title',l:10,t:15,w:60,h:10},
     {id:'help_text_context',l:10,t:35,w:60,h:50},
-    {id:'main',l:2,t:2,w:12,h:12,b_i:"http://172.16.10.35:8000/static/HTML/census/main.png"},
+    {id:'main',l:2,t:2,w:12,h:12,b_i:"http://129.211.14.136:8006/static/HTML/census/main.png"},
 ];
 
 let help_font_setting=[

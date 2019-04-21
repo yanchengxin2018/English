@@ -2,7 +2,7 @@ rule=0;
 
 
 let main_div_settings=[
-    {id:'main_index',w:'100',h:'155',b_i:'http://172.16.10.35:8000/static/HTML/main/back.jpg'},
+    {id:'main_index',w:'100',h:'155',b_i:'http://129.211.14.136:8006/static/HTML/main/back.jpg'},
     {id:'jianjie_back',l:10,t:45,w:80,h:70,b_c:'#fff4d8',tou:0.4},
     {id:'jianjie',l:10,t:45,w:80,h:70},
 

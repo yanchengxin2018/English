@@ -6,7 +6,7 @@ talk_div_setting=[
     {id:'screen',w:100,h:155,b:'#000000'},
 
     {id:'title',w:100,h:15,b_c:'#fff6e4',b:'#000000',o:2},
-    {id:'main',w:15,h:15,s:'http://172.16.10.35:8000/url/index'},
+    {id:'main',w:15,h:15,s:'http://129.211.14.136:8006/url/index'},
     {id:'main_1',t:4.5,l:3,w:8,b:'#000000',x:-35},
     {id:'main_2',t:9.5,l:3,w:8,b:'#000000',x:35},
     {id:'title_text',t:1,l:0,w:100,h:15},

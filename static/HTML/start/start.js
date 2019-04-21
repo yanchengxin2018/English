@@ -1,5 +1,5 @@
 window.onload = start_onload;
-ip = 'http://172.16.10.35:8000';
+ip = 'http://129.211.14.136:8006';
 new_card = '';
 update_card = '';
 info_card = '';
